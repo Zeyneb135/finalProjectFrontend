@@ -1,0 +1,186 @@
+.fp {
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1234px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: #c57805; /* Başlıq rengi */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.fpItemsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.fpItems {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+  flex-wrap: wrap; /* Sütunlar alt-üstə düşməsin deyə wrap əlavə olunur */
+}
+
+.fpItem {
+  width: calc(25% - 20px); /* 4 elemanlı bir düzen */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #e9e8e8; /* Arka plan rengi */
+  border-radius: 8px; /* Kenar yuvarlama */
+  padding: 15px; /* İçeriye boşluk ekleyerek daha düzenli görünmesini sağlıyoruz */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Hafif gölge efekti */
+}
+
+.fpItem:hover {
+  transform: scale(1.05); /* Hoverda büyütme efekti */
+  background-color: rgba(0, 0, 0, 0.05); /* Hoverda fon rəngi dəyişir */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Hoverda kölgə daha belirgin olur */
+}
+
+.fpImgContainer {
+  position: relative;
+}
+
+.fpImg {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.heartIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  
+  .likeIcon {
+    color: rgba(255, 255, 255, 0.7); /* Ürək ikonunun ilkin rəngi */
+  }
+  
+  .likeIconActive {
+    color: #d87e08; /* Ürək ikonu bəyənildikdə bu rəngdə olacaq */
+  }
+}
+
+.fpName {
+  color: #333;
+  font-weight: bold;
+}
+
+.fpCity {
+  font-weight: 300;
+  color: #777;
+}
+
+.fpPrice {
+  font-weight: 500;
+  color: #444;
+}
+
+.fpRating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  button {
+    background-color: #D89E08; /* Buton rengi */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  span {
+    font-size: 14px;
+    color: #555;
+  }
+}
+
+.paginationLeftIcon, .paginationRightIcon {
+  font-size: 30px;
+  color: #D89E08; /* Ok ikonunun rengi */
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.paginationLeftIcon {
+  left: -50px;
+}
+
+.paginationRightIcon {
+  right: -30px;
+}
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: 1px solid #D89E08; /* Buton kenar rengi */
+  background-color: transparent;
+  color: #D89E08; /* Buton yazısı rengi */
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination .activePage {
+  background-color: #D89E08; /* Aktif sayfa butonu */
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .fpItem {
+    width: calc(50% - 20px); /* 2 elemanlı düzülüş */
+  }
+  
+.paginationLeftIcon {
+  left: -30px;
+}
+
+.paginationRightIcon {
+  right: -5px;
+}
+
+}
+
+@media (max-width: 576px) {
+  .fpItem {
+    width: 100%; /* Mobil ekranlar üçün tam genişlik */
+  }
+  .fpImg {
+    height: 200px;
+  }
+  .paginationLeftIcon {
+    display: none;
+  }
+  
+  .paginationRightIcon {
+    display: none;
+  }
+  
+}
