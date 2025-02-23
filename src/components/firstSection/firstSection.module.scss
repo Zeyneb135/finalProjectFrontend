@@ -1,0 +1,136 @@
+.first {
+    padding: 44px;
+    background-color: #f9f9f9;
+    text-align: center;
+
+    h1{
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .featured {
+        width: 100%;
+        max-width: 1424px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        z-index: 1;
+        margin: 0 auto; 
+        .featuredItem {
+            position: relative;
+            color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 250px;
+            flex: 1;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            .featuredImg {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .featuredTitles {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                background-color: rgba(0, 0, 0, 0.5); 
+                padding: 10px;
+                border-radius: 5px;
+
+                h2 {
+                    font-size: 1.5rem;
+                    margin: 0;
+                    color: #fff;
+                }
+
+                p {
+                    font-size: 1rem;
+                    margin: 5px 0 0;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .first {
+
+        h1{
+            font-size: 2rem;
+        }
+
+        .featured {
+            width: 100%;
+            max-width: 720px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            z-index: 1;
+            margin: 0 auto; 
+    
+            
+        }
+    }
+}
+
+@media (max-width: 768px) {
+   h1{
+        font-size: 1.5rem; 
+    }
+
+    .featured {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .featuredItem {
+        height: 200px; 
+        margin-bottom: 20px; 
+    }
+
+    .featuredTitles {
+        bottom: 15px; 
+        left: 15px; 
+        padding: 8px; 
+        h2 {
+            font-size: 1.3rem; 
+        }
+
+        p {
+            font-size: 0.9rem; 
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1rem; 
+    }
+
+    .featuredItem {
+        height: 150px; 
+    }
+
+    .featuredTitles {
+        bottom: 10px; 
+        left: 10px; 
+        padding: 5px; 
+
+        h2 {
+            font-size: 1.2rem; 
+        }
+
+        p {
+            font-size: 0.8rem; 
+        }
+    }
+}

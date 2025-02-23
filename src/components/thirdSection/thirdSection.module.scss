@@ -1,0 +1,196 @@
+.fp {
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1234px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: #c57805; 
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.fpItemsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.fpItems {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+  flex-wrap: wrap; 
+}
+
+.fpItem {
+  width: calc(25% - 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #e9e8e8; 
+  border-radius: 8px; 
+  padding: 15px; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); 
+}
+
+.fpItem:hover {
+  transform: scale(1.05); 
+  background-color: rgba(0, 0, 0, 0.05); 
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.fpImgContainer {
+  position: relative;
+}
+
+.fpImg {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.heartIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+
+  .likeIcon {
+    color: rgba(255, 255, 255, 0.7); 
+    transition: color 0.3s ease; 
+    
+    &:hover {
+      color: #d87e08;
+    }
+  }
+
+  &.likeIconActive {
+    color: #d87e08; 
+  }
+}
+.fpItems .fpItem:only-child {
+  width: 60%;
+}
+
+.fpName {
+  color: #333;
+  font-weight: bold;
+}
+
+.fpCity {
+  font-weight: 300;
+  color: #777;
+}
+
+.fpPrice {
+  font-weight: 500;
+  color: #444;
+}
+
+.fpRating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  button {
+    background-color: #D89E08; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  span {
+    font-size: 14px;
+    color: #555;
+  }
+}
+
+.paginationLeftIcon, .paginationRightIcon {
+  font-size: 50px;
+  color: #f39508; 
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.paginationLeftIcon {
+  left: 1px;
+}
+
+.paginationRightIcon {
+  right: 14px;
+}
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: 1px solid #D89E08;
+  background-color: transparent;
+  color: #D89E08;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination .activePage {
+  background-color: #D89E08; 
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .fpItem {
+    width: calc(50% - 20px); 
+  }
+  
+.paginationLeftIcon {
+  left: -30px;
+}
+
+.paginationRightIcon {
+  right: -5px;
+}
+
+}
+
+@media (max-width: 576px) {
+  .fpItem {
+    width: 100%; 
+  }
+  .fpImg {
+    height: 200px;
+  }
+  .paginationLeftIcon {
+    display: none;
+  }
+  
+  .paginationRightIcon {
+    display: none;
+  }
+ 
+  
+}

@@ -1,0 +1,132 @@
+.wish {
+    padding: 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1234px;
+    margin: 0 auto;
+  }
+  
+  .sectionTitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: #c57805;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .wishlistItems {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px;
+    justify-content: center;
+  }
+  .wishlistItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    background-color: #e9e8e8;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .wishlistItem:hover {
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wishlistItemDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .itemImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .itemName {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .itemCity {
+    font-weight: 300;
+    color: #777;
+  }
+  
+  .itemPrice {
+    font-weight: 500;
+    color: #444;
+  }
+  
+
+  .itemRating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+    button {
+      background-color: #d89e08;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  
+    span {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+  
+  .removeButton {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .removeIcon {
+    font-size: 20px;
+    color: #e74c3c;
+    cursor: pointer;
+  
+    &:hover {
+      color: #c0392b;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .wishlistItems {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .wishlistItems {
+      grid-template-columns: 1fr; 
+    }
+  
+    .itemImage {
+      height: 200px; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sectionTitle {
+      font-size: 26px;
+    }
+  
+    .wishlistItem {
+      padding: 10px; 
+    }
+  }
+  

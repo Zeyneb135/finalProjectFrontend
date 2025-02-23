@@ -1,0 +1,415 @@
+// hotel.module.scss
+
+.hotelWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 24px 0 24px 0;
+    flex-wrap: wrap; 
+    width: 100%;
+
+    .searchContainer {
+        width: 22%;
+        min-width: 280px; 
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: #f8f8f8;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        div {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .searchItem {
+        width: 66%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .searchs {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            border: 1.5px solid #0c3d62;
+            padding: 24px 12px 24px 12px;
+            background-color: #F8F8F8;
+            gap: 14PX;
+
+            .searchContent {
+                display: flex;
+                align-items: center;
+                width: 80%;
+
+                .siDesc {
+                    width: 75%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .siTitle {
+                        color: #0c3d62;
+                        font-size: 28px;
+                    }
+
+                    .siDistance {
+                        margin: 6px 0 6px 0;
+                    }
+
+                    .siTaxiOp {
+                        background-color: #b67e06;
+                        width: 107px;
+                        padding: 6px 0 6px 0;
+                        border-radius: 10px;
+                        color: #F8F8F8;
+                    }
+
+                    .siSubtitle {
+                        margin: 6px 0 6px 0;
+                        font-weight: 600;
+                    }
+
+                    .siFeatures {
+                        width: 100%;
+                    }
+
+                    .siCancelOp {
+                        color: #003a65;
+                        margin: 6px 0 6px 0;
+                        font-weight: 600;
+                    }
+                }
+
+                .siDetails {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    height: 100%;
+                    justify-content: space-between;
+
+                    .siRating {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+
+                        span {
+                            color: #855c04;
+                        }
+
+                        button {
+                            background-color: #b67e06;
+                            border: none;
+                            padding: 6px;
+                            color: white;
+                        }
+                    }
+
+                    .thinks {
+                        display: flex;
+                        align-items: flex-end;
+                        flex-direction: column;
+
+                        .siDetailTexts {
+                            display: flex;
+                            align-items: flex-end;
+                            flex-direction: column;
+
+                            .siTaxOp {
+                                margin: 6px 0 6px 0;
+                                color: #6f6a6a;
+                            }
+
+                        }
+
+                        .siDetailButton {
+                            border: none;
+                            background-color: #b67e06;
+                            color: white;
+                            padding: 8px 14px 8px 14px;
+                            border-radius: 24px;
+                        }
+                    }
+
+
+                }
+            }
+
+
+
+            .image {
+                img {
+                    height: 200px;
+                    width: 300px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media (max-width: 1400px) {
+
+    .hotelWrapper {
+
+
+
+        .searchItem {
+
+            .searchs {
+
+
+                .searchContent {
+                    display: flex;
+                    align-items: center;
+                    width: 80%;
+
+                    .siDesc {
+                        width: 55%;
+
+                    }
+
+                }
+
+            }
+        }
+
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .hotelWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        .searchContainer {
+            width: 52%;
+            min-width: 280px;
+            padding: 1rem;
+            border-radius: 8px;
+            background-color: #f8f8f8;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            input {
+                width: 100%;
+                padding: 0.8rem;
+                margin: 0.5rem 0;
+                border-radius: 8px;
+                border: 1px solid #ddd;
+            }
+
+            div {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .searchItem {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+
+            .searchs {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 1.5px solid #0c3d62;
+                padding: 24px 0 24px 0;
+                background-color: #F8F8F8;
+                gap: 14PX;
+                border-radius: 24px;
+
+
+                .searchContent {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 80%;
+
+                    .siDesc {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+
+                        .siTitle {
+                            color: #0c3d62;
+                            font-size: 28px;
+                        }
+
+                        .siDistance {
+                            margin: 6px 0 6px 0;
+                        }
+
+                        .siTaxiOp {
+                            background-color: #b67e06;
+                            padding: 6px 0 6px 0;
+                            border-radius: 10px;
+                            color: #F8F8F8;
+                        }
+
+                        .siSubtitle {
+                            margin: 6px 0 6px 0;
+                            font-weight: 600;
+                        }
+
+                    
+
+                        .siCancelOp {
+                            color: #003a65;
+                            margin: 6px 0 6px 0;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .siDetails {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        height: 100%;
+                        justify-content: space-between;
+
+                        .siRating {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 8px;
+
+                            span {
+                                color: #855c04;
+                            }
+
+                            button {
+                                background-color: #b67e06;
+                                border: none;
+                                padding: 6px;
+                                color: white;
+                            }
+                        }
+
+                        .thinks {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+
+                            .siDetailTexts {
+                                display: flex;
+                                align-items: center;
+                                flex-direction: column;
+
+                                .siTaxOp {
+                                    margin: 6px 0 6px 0;
+                                    color: #6f6a6a;
+                                }
+
+                            }
+
+                            .siDetailButton {
+                                border: none;
+                                background-color: #b67e06;
+                                color: white;
+                                padding: 8px 14px 8px 14px;
+                                border-radius: 24px;
+                            }
+                        }
+
+
+                    }
+                }
+
+
+
+                .image {
+                    img {
+                        height: 300px;
+                        width: 400px;
+                        border-radius: 24px;
+
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+@media (max-width:992px) {
+
+    .hotelWrapper {
+   
+
+        .searchItem {
+            width: 60%;
+       
+        }
+
+    }
+
+}
+@media (max-width:768px) {
+
+    .hotelWrapper {
+   
+
+        .searchItem {
+            width: 80%;
+       
+        }
+
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .hotelWrapper {
+        .searchContainer {
+            width: 90%;
+            border-radius: 8px;
+            background-color: #f8f8f8;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+            input {
+                width: 100%;
+                border-radius: 8px;
+                border: 1px solid #ddd;
+            }
+    
+            div {
+                margin-bottom: 1rem;
+            }
+        }
+    
+        .searchItem {
+            width: 90%;
+            .searchs {
+                .image {
+                    img {
+                        height: 150px;
+                        width: 200px;
+                        border-radius: 24px;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
